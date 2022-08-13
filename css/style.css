@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body {
+    font-family: 'Arsenal', sans-serif;
+    overflow-x: hidden;
+    height: 5000px;
+}
+
+input[type = "checkbox"] {
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+  }
+  
+  .bar {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+  }
+  
+  .bar span {
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: #f1faee;
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.3s ease;
+    left: 0;
+  }
+  
+  .bar span.top {
+    top: 0;
+  }
+  
+  .bar span.middle {
+    top: 17px;
+  }
+  
+  .bar span.bottom {
+    bottom: 0;
+  }
+  
+  input[type]:checked ~ span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+  }
+  
+  input[type]:checked ~ span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px;
+    box-shadow: 0 0 10px #495057;
+  }
+  
+  input[type]:checked ~ span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+ 
+  /*very important*/
+  .navbar-toggler {
+    border: none !important;
+    background-color: unset !important;
+    border-image: none !important;
+  }
+  .navbar-toggler:focus {
+   box-shadow: 0 0 0 0rem !important; 
+  }
+
+#topbtn {
+    position: fixed;
+    background: url(../images/btn\ up.jpg);
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1111;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/banner-parallax-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.navbar {
+    background-color:  black;
+}
+
+.navbar-nav .nav-link  {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-header h3 {
+    font-size: 40px;
+}
+
+@media screen and (max-width:750px) {
+    header {
+        justify-content: center;
+    }
+}
+
+/*MILANCELOS*/
+
+#MILANCELOS{
+    height: 150vh;
+    width: 100%;
+    background: url(../images/h6m1-image-banner-2.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+.col-md-6 button {
+    display: none;
+    transition: display 0.5s linear;
+}
+
+.col-md-6:hover button {
+    display: block;
+}
+
+button
+{
+    background-color: #fff;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: black;
+    color: #fff;
+}
+
+@media screen and (max-width:800px) {
+    #MILANCELOS {
+        height: max-content; /*Very useful*/
+    }
+}
+
+/*SALE*/
+
+#SALE {
+    background: url(../images/h6m1-image-banner-1.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.count {
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-weight: bolder;
+}
+
+@media screen and (max-width:720px) {
+    .sodales{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+/*SALE*/
+
+
+/*sec 4*/
+.icons-list {
+    background-color: #f4f5f7;
+}
+
+/*Hover*/
+.hover-images {
+   width: 250px;
+   height: 250px;
+    overflow: hidden;
+}
+.hover-images img {
+    transition: 1s all;
+}
+.hover-images:hover img:nth-child(2) {
+    transform: translateX(-50%) scaleX(2);
+    opacity: 0;
+    filter: blur(10px);
+}
+
+.hover-images img:nth-child(1) {
+    transform: translateX(50%) scaleX(2);
+    opacity: 0;
+    filter: blur(10px);
+}
+.hover-images:hover img:nth-child(1) {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+    filter: blur(0);
+}
+
+/*Hover*/
+
+.mini-photo , .mini-photo1 , .mini-photo2 , .mini-photo3 ,.mini-photo4, .mini-photo5, .mini-photo6, .mini-photo7 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#featured p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c4a79a;
+}
+
+
+/*LATESTPOSTS*/
+#LATESTPOSTS .row img {
+    transition: 0.5s transform;
+    cursor: pointer;
+}
+#LATESTPOSTS .row .item:hover img {
+    transform: scale(1.1);
+}
+
+.paragraph1 {
+    color: #c2bdb9;
+}
+
+.paragraph2 {
+    color: #c2bdb9;
+}
+
+/*LATESTPOSTS*/
+
+/*ellaoninstagram*/
+
+
+#ellaoninstagram .item img {
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+
+#ellaoninstagram .item:hover img {
+    transform: scale(1.2);
+} 
+/*ellaoninstagram*/
+
+
+/*footer*/
+
+footer {
+    background-color: #1a2531;
+}
+
+footer p {
+    color: #d3c8ca;
+}
+
+footer button:hover {
+    background-color:#7e7542;
+}
+
+footer hr {
+    color: rgb(209, 211, 211);
+}
+
+footer li {
+    color: gray;
+    transition: 0.5s all ease;
+    cursor: pointer;
+}
+
+footer li:hover {
+    color: white;
+    text-decoration: underline;
+}
